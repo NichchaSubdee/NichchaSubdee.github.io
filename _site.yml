@@ -1,17 +1,17 @@
 name: "p8105_HW4"
 output_dir: "docs"
+
 navbar:
-  title: "Nichcha Subdee"
-  right:
+  title: "Homework 4: Interactivity - ns3923"
+  left:
     - text: "Home"
       href: index.html
-    - text: "CV"
-      href: files/CV_ns3923.pdf
-  left: 
-    - text: "LinkedIn"
-      href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
+  right: 
+    - text: "GitHub"
+      href: "https://github.com/NichchaSubdee/p8105_ns3923.github.io"
+      
 output:
   html_document:
-    theme: cerulean
+    theme: flatly
     toc: true
     toc_float: true
