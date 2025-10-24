@@ -1,0 +1,14 @@
+---
+title: "P8105_HW4_ns3923"
+output: html_document
+---
+
+This page is for *Homework 4* of Nichcha Subdee (Uni: ns3923).
+
+## Introduction
+
+Hello! I'm a second-year MPH student in the Department of Epidmiology with a Certificate in Advanced Epidemiology at Columbia University's Mailman School of Public Health. 
+
+To learn more about my academic and professional work, please click the link below to my Linkedin and my CV.
+
+[CV (.pdf)](./files/CV_ns3923.pdf) 

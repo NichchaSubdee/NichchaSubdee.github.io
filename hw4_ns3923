@@ -1,0 +1,17 @@
+name: "p8105_HW4"
+output_dir: "docs"
+navbar:
+  title: "Nichcha Subdee"
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "CV"
+      href: files/CV_ns3923.pdf
+  left: 
+    - text: "LinkedIn"
+      href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
+output:
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_float: true
