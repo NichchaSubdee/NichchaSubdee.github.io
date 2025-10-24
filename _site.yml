@@ -8,7 +8,12 @@ navbar:
       href: index.html
   right: 
     - text: "GitHub"
-      href: "https://github.com/NichchaSubdee/p8105_ns3923.github.io"
+      href: "https://github.com/NichchaSubdee"
+    - text: "Email"
+      href: "mailto:ns3923@cumc.columbia.edu"
+    - text: "LinkedIn"
+      href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
+  
       
 output:
   html_document:

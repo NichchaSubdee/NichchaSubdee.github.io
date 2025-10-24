@@ -9,9 +9,9 @@ This page is for *Homework 4* of Nichcha Subdee (Uni: ns3923).
 
 Hello! I'm a second-year MPH student in the Department of Epidemiology with a Certificate in Advanced Epidemiology at Columbia University's Mailman School of Public Health. 
 
-To learn more about my academic and professional work, see:
+To learn more about my academic and professional work, please see:
 
 
-[**LinkedIn-Nichcha Subdee**](https://www.linkedin.com/in/nichcha-subdee-b94247108/){target="_blank" rel="noopener"}
+[**LinkedIn - Nichcha Subdee**](https://www.linkedin.com/in/nichcha-subdee-b94247108/){target="_blank" rel="noopener"}
 
-[**CV-Nichcha Subdee**](files/CV_ns3923.pdf){target="_blank" rel="noopener"}
+[**CV - Nichcha Subdee**](files/CV_ns3923.pdf){target="_blank" rel="noopener"}
