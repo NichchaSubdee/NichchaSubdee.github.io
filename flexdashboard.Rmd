@@ -1,0 +1,44 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("nyc_restaurant_inspections")
+
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Plot 1
+
+```{r plot1, message=FALSE}
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+

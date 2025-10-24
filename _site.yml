@@ -6,6 +6,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Flexdashboard"
+      href: flexdashboard.html
   right: 
     - text: "GitHub"
       href: "https://github.com/NichchaSubdee"
