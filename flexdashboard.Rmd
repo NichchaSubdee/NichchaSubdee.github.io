@@ -68,6 +68,7 @@ bar_df = ny_noaa_df |>
   mutate(month = fct_reorder(month, n_days))
 ```
 
+
 **Figure 1: Temperature** {data-width=650}
 -----------------------------------------------------------------------
 
@@ -98,6 +99,7 @@ scatter_df |>
 
 **What it shows:** This plot displays the relationship between daily minimum and maximum temperatures, covering a range of weather conditions across New York between `r year_span`. There is a clear upward pattern, meaning that warm days usually follow warm nights. The yellow and green points in the upper-right area occur during summer, while the purple and blue points in the lower-left area occur in fall or winter, when overall temperatures are lower.
 
+
 **Figure 2: Snowfall** {data-width=650}
 -----------------------------------------------------------------------
 
@@ -120,6 +122,7 @@ box_df |>
 ```
 
 **What it shows:** How daily snowfall changes across the months of the year. Winter months have more snowfall and more variation, while summer shows almost none. 
+
 
 **Figure 3: Precipitation** {data-width=650}
 -----------------------------------------------------------------------
