@@ -6,6 +6,23 @@ output:
     vertical_layout: fill
 ---
 
+# About the NY NOAA data
+
+This dashboard uses the `ny_noaa` dataset from the `p8105.datasets` package. The data come from the National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) database. 
+
+Main variables we use:
+
+- **tmax** and **tmin**: daily maximum and minimum temperature. They are recorded in tenths of °C, and here we convert them to °C.
+
+- **prcp**: daily precipitation in millimeters.
+
+- **snow**: daily snowfall in millimeters.
+
+- **date, year, month**: calendar fields based on the observation date.
+
+For smooth viewing, the scatter plot shows a random sample of up to 20,000 days. The box plot and bar chart use the filtered data or monthly counts.  
+
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
@@ -30,7 +47,8 @@ ny_noaa_df = ny_noaa |>
     
     snow = as.numeric(snow)
   ) |> 
-  filter(between(year, 1990, 2010))
+  filter(between(year, 2000, 2010))
+  year_span = paste(min(ny_noaa_df$year), "-", max(ny_noaa_df$year))
 
 set.seed(1)
 scatter_df = ny_noaa_df |> 
@@ -48,7 +66,7 @@ bar_df = ny_noaa_df |>
   mutate(month = fct_reorder(month, n_days))
 ```
 
-**Figure 1** {data-width=650}
+**Figure 1: Temperature** {data-width=650}
 -----------------------------------------------------------------------
 
 ```{r plot1, message=FALSE}
@@ -56,25 +74,29 @@ scatter_df |>
   mutate(
     text_label = paste(
       "Date:", date,
-      "Tmin:", round(tmin_c, 1), "C",
-      "Tmax:", round(tmax_c, 1), "C"
+      "Tmin:", round(tmin_c, 1), "°C",
+      "Tmax:", round(tmax_c, 1), "°C"
     )) |> 
   plot_ly(
     x = ~tmin_c, y = ~tmax_c,
     type = "scatter", mode = "markers",
     color = ~tmax_c,
     text = ~text_label, hoverinfo = "text",
-    opacity = 0.7, marker = list(size = 3)
+    opacity = 0.8, marker = list(size = 3)
   ) |> 
   layout(
-    xaxis = list(title = "Tmin (C)"),
-    yaxis = list(title = "Tmax (C)"),
-    title = "Daily Tmin vs Tmax (20,000 sampled)"
+    xaxis = list(title = "Daily minimum temperature (°C)"),
+    yaxis = list(title = "Daily maximum temperature (°C)"),
+    title = 
+      "Daily minimum vs maximum temperature (20,000 sampled)",
+      "<br><sup>NY NOAA stations, ", year_span, "</sup>"
   )
 
 ```
 
-**Figure 2** {data-width=350}
+**What it shows:** This plot displays the relationship between daily minimum and maximum temperatures, covering a range of weather conditions across New York between `r year_span`. There is a clear upward pattern, meaning that warm days usually follow warm nights. The yellow and green points in the upper-right area occur during summer, while the purple and blue points in the lower-left area occur in fall or winter, when overall temperatures are lower.
+
+**Figure 2: Snowfall** {data-width=650}
 -----------------------------------------------------------------------
 
 ```{r plot2, message=FALSE}
@@ -86,27 +108,38 @@ box_df |>
   
   layout(
     xaxis = list(title = ""),
-    yaxis = list(title = "Snowfall (mm)"),
-    title = "Snowfall distribution by month"
+    yaxis = list(title = "Daily snowfall (mm)"),
+    legend = list(title = list(text = "Month")),
+    title = list(text = paste(
+      "Snowfall distribution by month",
+      "<br><sup>NY NOAA stations, ", year_span, "</sup>"
+    ))
   )
-
-
 ```
 
-**Figure 3** {data-width=350}
+**What it shows:** How daily snowfall changes across the months of the year. Winter months have more snowfall and more variation, while summer shows almost none. 
+
+**Figure 3: Precipitation** {data-width=650}
 -----------------------------------------------------------------------
 
 ```{r plot3, message=FALSE}
 bar_df |>
   plot_ly(
     x = ~month, y = ~n_days,
-    type = "bar", color = ~month, 
+    type = "bar", color = ~month,
     text = ~paste(n_days, "days"), hoverinfo = "text+x+y"
   ) |>
   layout(
     xaxis = list(title = ""),
-    yaxis = list(title = "Days with precitipation (> 0 mm)"),
-    title = "Precipitation days by month"
+    yaxis = list(title = "Days with precipitation (> 0 mm)"),
+    legend = list(title = list(text = "Month")),
+    title = list(text = paste(
+      "Precipitation Days by Month",
+      "<br><sup>NY NOAA stations, ", year_span, "</sup>"
+    ))
   )
 ```
 
+**What it shows:** The number of days with precipitation in each month and which parts of the year are wetter or drier in New York. Taller bars mean that month had more wet days, while shorter bars mean fewer. The seasonal pattern is visible: late spring through winter generally has more wet days than midsummer. 
+
+*Reference:* Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray, R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: Global Historical Climatology Network - Daily (GHCN-Daily), Version 3.22.
