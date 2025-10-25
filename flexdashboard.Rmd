@@ -5,7 +5,6 @@ output:
     orientation: columns
     vertical_layout: scroll
     theme: flatly 
-output_file: flexdashboard.html
 ---
 
 # About the NY NOAA data
