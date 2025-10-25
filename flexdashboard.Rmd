@@ -4,18 +4,6 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
-    theme: flatly 
-navbar:
-   left:
-    - text: "Home"
-      href: index.html
-   right: 
-    - text: "GitHub"
-      href: "https://github.com/NichchaSubdee"
-    - text: "Email"
-      href: "mailto:ns3923@cumc.columbia.edu"
-    - text: "LinkedIn"
-      href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
 ---
 
 # About the NY NOAA data
@@ -40,6 +28,7 @@ library(flexdashboard)
 library(tidyverse)
 library(lubridate)
 library(plotly)
+library(forcats)
 library(p8105.datasets)
 
 data(ny_noaa)
