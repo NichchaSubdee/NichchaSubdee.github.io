@@ -21,5 +21,3 @@ output:
     theme: flatly
     toc: true
     toc_float: true
-  flexdashboard::flex_dashboard:
-    theme: flatly
