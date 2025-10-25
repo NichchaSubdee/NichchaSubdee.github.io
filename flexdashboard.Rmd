@@ -3,8 +3,18 @@ title: "NY NOAA Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
-    vertical_layout: scroll
+    vertical_layout: fill
     theme: flatly 
+    
+  navbar:
+  left:
+    - text: "Home"
+      href: index.html        # goes to your site home (same docs/ folder)
+  right:
+    - text: "GitHub"
+      href: "https://github.com/NichchaSubdee"
+    - text: "Email"
+      href: "mailto:ns3923@cumc.columbia.edu"
 ---
 
 # About the NY NOAA data
