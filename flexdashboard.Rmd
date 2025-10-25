@@ -2,7 +2,7 @@
 title: "NY NOAA Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
     theme: flatly 
 output_file: flexdashboard.html
@@ -69,7 +69,7 @@ bar_df = ny_noaa_df |>
 ```
 
 
-**Figure 1: Temperature** {data-width=650}
+**Figure 1: Temperature** {data-width = 650}
 -----------------------------------------------------------------------
 
 ```{r plot1, message=FALSE}
@@ -100,7 +100,7 @@ scatter_df |>
 **What it shows:** This plot displays the relationship between daily minimum and maximum temperatures, covering a range of weather conditions across New York between `r year_span`. There is a clear upward pattern, meaning that warm days usually follow warm nights. The yellow and green points in the upper-right area occur during summer, while the purple and blue points in the lower-left area occur in fall or winter, when overall temperatures are lower.
 
 
-**Figure 2: Snowfall** {data-width=650}
+**Figure 2: Snowfall** {data-width = 350}
 -----------------------------------------------------------------------
 
 ```{r plot2, message=FALSE}
@@ -124,7 +124,7 @@ box_df |>
 **What it shows:** How daily snowfall changes across the months of the year. Winter months have more snowfall and more variation, while summer shows almost none. 
 
 
-**Figure 3: Precipitation** {data-width=650}
+**Figure 3: Precipitation** {data-width = 350}
 -----------------------------------------------------------------------
 
 ```{r plot3, message=FALSE}
