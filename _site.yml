@@ -15,7 +15,6 @@ navbar:
       href: "mailto:ns3923@cumc.columbia.edu"
     - text: "LinkedIn"
       href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
-  
 output:
   html_document:
     theme: flatly

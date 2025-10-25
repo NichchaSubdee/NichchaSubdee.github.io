@@ -5,7 +5,7 @@ output:
     orientation: columns
     vertical_layout: fill
     theme: flatly 
-  navbar:
+navbar:
   - { title: "Home",   href: "index.html" }
   - { title: "GitHub", href: "https://github.com/NichchaSubdee" }
   - { title: "Email",  href: "mailto:ns3923@cumc.columbia.edu" }
