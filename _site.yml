@@ -16,7 +16,6 @@ navbar:
     - text: "LinkedIn"
       href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
   
-      
 output:
   html_document:
     theme: flatly
