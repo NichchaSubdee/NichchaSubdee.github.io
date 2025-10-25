@@ -6,9 +6,16 @@ output:
     vertical_layout: fill
     theme: flatly 
 navbar:
-  - { title: "Home",   href: "index.html" }
-  - { title: "GitHub", href: "https://github.com/NichchaSubdee" }
-  - { title: "Email",  href: "mailto:ns3923@cumc.columbia.edu" }
+   left:
+    - text: "Home"
+      href: index.html
+   right: 
+    - text: "GitHub"
+      href: "https://github.com/NichchaSubdee"
+    - text: "Email"
+      href: "mailto:ns3923@cumc.columbia.edu"
+    - text: "LinkedIn"
+      href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"
 ---
 
 # About the NY NOAA data
