@@ -1,5 +1,5 @@
 ---
-title: "Flexdashboard"
+title: "NY NOAA Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -9,36 +9,104 @@ output:
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
-library(p8105.datasets)
+library(lubridate)
 library(plotly)
+library(p8105.datasets)
 
-data("nyc_restaurant_inspections")
+data(ny_noaa)
 
+cap_sample = function(df, n_max = 20000) {
+  if (nrow(df) > n_max) dplyr::slice_sample(df, n = n_max) else df
+}
 
+ny_noaa_df = ny_noaa |>
+  mutate(
+    date = ymd(date),
+    year = year(date),
+    month = month(date, label = TRUE, abbr = TRUE),
+    
+    tmax_c = as.numeric(tmax) / 10,
+    tmin_c = as.numeric(tmin) / 10,
+    
+    snow = as.numeric(snow)
+  ) |> 
+  filter(between(year, 1990, 2010))
+
+set.seed(1)
+scatter_df = ny_noaa_df |> 
+  filter(
+    !is.na(tmax_c), !is.na(tmin_c)) |> 
+  cap_sample(20000)
+
+box_df = ny_noaa_df |> 
+  filter(!is.na(snow)) |> 
+  mutate(month = fct_reorder(month, snow, .fun = median, na.rm = TRUE))
+  
+bar_df = ny_noaa_df |> 
+  mutate(prcp_day = if_else(!is.na(prcp) & prcp > 0, 1L, 0L)) |> 
+  count(month, wt = prcp_day, name = "n_days") |>
+  mutate(month = fct_reorder(month, n_days))
 ```
 
-Column {data-width=650}
+**Figure 1** {data-width=650}
 -----------------------------------------------------------------------
-
-### Plot 1
 
 ```{r plot1, message=FALSE}
-
+scatter_df |> 
+  mutate(
+    text_label = paste(
+      "Date:", date,
+      "Tmin:", round(tmin_c, 1), "C",
+      "Tmax:", round(tmax_c, 1), "C"
+    )) |> 
+  plot_ly(
+    x = ~tmin_c, y = ~tmax_c,
+    type = "scatter", mode = "markers",
+    color = ~tmax_c,
+    text = ~text_label, hoverinfo = "text",
+    opacity = 0.7, marker = list(size = 3)
+  ) |> 
+  layout(
+    xaxis = list(title = "Tmin (C)"),
+    yaxis = list(title = "Tmax (C)"),
+    title = "Daily Tmin vs Tmax (20,000 sampled)"
+  )
 
 ```
 
-Column {data-width=350}
+**Figure 2** {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+```{r plot2, message=FALSE}
+box_df |>
+  plot_ly(
+    y = ~snow, color = ~month,
+    type = "box"
+  ) |>
+  
+  layout(
+    xaxis = list(title = ""),
+    yaxis = list(title = "Snowfall (mm)"),
+    title = "Snowfall distribution by month"
+  )
 
-```{r}
 
 ```
 
-### Chart C
+**Figure 3** {data-width=350}
+-----------------------------------------------------------------------
 
-```{r}
-
+```{r plot3, message=FALSE}
+bar_df |>
+  plot_ly(
+    x = ~month, y = ~n_days,
+    type = "bar", color = ~month, 
+    text = ~paste(n_days, "days"), hoverinfo = "text+x+y"
+  ) |>
+  layout(
+    xaxis = list(title = ""),
+    yaxis = list(title = "Days with precitipation (> 0 mm)"),
+    title = "Precipitation days by month"
+  )
 ```
 
