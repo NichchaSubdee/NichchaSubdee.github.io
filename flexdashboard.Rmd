@@ -4,27 +4,22 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+navbar:
+  - { title: "Home", href: "index.html" }
+  - { title: "GitHub", href: "https://github.com/NichchaSubdee", target: "_blank" }
+  - { title: "LinkedIn", href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/", target: "_blank" }
+
 ---
 
 # About the NY NOAA data
 
 This dashboard uses the `ny_noaa` dataset from the `p8105.datasets` package. The data come from the National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) database. 
 
+For smooth viewing, the scatter plot shows a random sample of up to 20,000 days. The box plot and bar chart use the filtered data or monthly counts.
+
 *Reference:* Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray, R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: Global Historical Climatology Network - Daily (GHCN-Daily), Version 3.22.
 
-Main variables we use:
-
-- **tmax** and **tmin**: daily maximum and minimum temperature. They are recorded in tenths of °C, and here we convert them to °C.
-
-- **prcp**: daily precipitation in millimeters.
-
-- **snow**: daily snowfall in millimeters.
-
-- **date, year, month**: calendar fields based on the observation date.
-
-For smooth viewing, the scatter plot shows a random sample of up to 20,000 days. The box plot and bar chart use the filtered data or monthly counts.  
-
-
+  
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
@@ -70,6 +65,8 @@ bar_df = ny_noaa_df |>
 ```
 
 
+
+
 **Figure 1: Temperature** {data-width=650}
 -----------------------------------------------------------------------
 
@@ -100,7 +97,8 @@ scatter_df |>
 
 **What it shows:** This plot displays the relationship between daily minimum and maximum temperatures, covering a range of weather conditions across New York between `r year_span`. There is a clear upward pattern, meaning that warm days usually follow warm nights. The yellow and green points in the upper-right area occur during summer, while the purple and blue points in the lower-left area occur in fall or winter, when overall temperatures are lower.
 
-<div style="height: 16px;"></div>
+
+
 
 **Figure 2: Snowfall** {data-width=350}
 -----------------------------------------------------------------------
@@ -124,6 +122,9 @@ box_df |>
 ```
 
 **What it shows:** How daily snowfall changes across the months of the year. Winter months have more snowfall and more variation, while summer shows almost none. 
+
+
+
 
 **Figure 3: Precipitation** {data-width=350}
 -----------------------------------------------------------------------
