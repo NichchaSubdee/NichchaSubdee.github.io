@@ -69,7 +69,7 @@ bar_df = ny_noaa_df |>
 **Figure 1: Temperature** {data-width=650}
 -----------------------------------------------------------------------
 
-```{r plot1, message=FALSE, include=FALSE}
+```{r plot1, message=FALSE}
 scatter_df |> 
   mutate(
     text_label = paste(
@@ -101,7 +101,7 @@ scatter_df |>
 **Figure 2: Snowfall** {data-width=350}
 -----------------------------------------------------------------------
 
-```{r plot2, message=FALSE, include = FALSE}
+```{r plot2, message=FALSE}
 box_df |>
   plot_ly(
     y = ~snow, color = ~month,
@@ -126,7 +126,7 @@ box_df |>
 **Figure 3: Precipitation** {data-width=350}
 -----------------------------------------------------------------------
 
-```{r plot3, message=FALSE, include=FALSE}
+```{r plot3, message=FALSE}
 bar_df |>
   plot_ly(
     x = ~month, y = ~n_days,
