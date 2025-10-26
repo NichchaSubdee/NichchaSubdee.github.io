@@ -4,10 +4,6 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
-navbar:
-  - {title: "Home", href: "index.html" }
-  - {title: "GitHub", href: "https://github.com/NichchaSubdee"}
-  - {title: "LinkedIn", href: "https://www.linkedin.com/in/nichcha-subdee-b94247108/"}
 ---
 
 # About the NY NOAA data
