@@ -66,7 +66,6 @@ bar_df = ny_noaa_df |>
 
 
 
-
 **Figure 1: Temperature** {data-width=650}
 -----------------------------------------------------------------------
 
@@ -99,7 +98,6 @@ scatter_df |>
 
 
 
-
 **Figure 2: Snowfall** {data-width=350}
 -----------------------------------------------------------------------
 
@@ -122,7 +120,6 @@ box_df |>
 ```
 
 **What it shows:** How daily snowfall changes across the months of the year. Winter months have more snowfall and more variation, while summer shows almost none. 
-
 
 
 
