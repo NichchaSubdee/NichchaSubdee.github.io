@@ -1,0 +1,80 @@
+---
+title: "RESUME"
+output: html_document
+---
+
+### **Name:** NICHCHA SUBDEE
+
+**Contact information:** 917-513-3564 | ns3923@cumc.columbia.edu | New York, NY
+
+### **Education** 
+
+* **Master's degree**
+
+1. **Columbia University: Mailman School of Public Health (Expected 2026)**
+
+Master of Public Health (MPH), Department of Epidemiology, Certificate in Advanced Epidemiology
+
+2. **Mahidol University: Faculty of Tropical Medicine (2024)**
+    
+Graduate Diploma, Biomedical and Health Informatics (International program)	    
+
+* **Bachelor's degress**
+
+3. **Marshall University, College of Science (2019)**
+
+Bachelor of Science (BS), Biological Science major & Chemistry minor	
+
+
+### **Work & Leadership experience**
+
+* **Cancer Epidemiology Education in Special Population (CEESP 2025), Khon Kaen, Thailand (May 2025 – Aug 2025)**
+
+    *	Conducted research on risk factors for cholangiocarcinoma using hospital-based EMR data by applying machine learning methods in Python and R to develop predictive models for early detection
+
+* **Research Technical Officer, Faculty of Medicine Siriraj Hospital, Mahidol University (Dec 2019 – May 2023)**
+
+    * Managed 14 research projects on inflammatory bowel disease (IBD) and gastrointestinal diseases.
+    
+    * Coordinated data collection and supervised project activities leading to 8 publications
+   
+* **Organic Chemistry Laboratory Teaching Assistant (TA), College of Science, Marshall University (Jan 2019 – May 2019)**
+
+    *	Guided students in the Organic Chemistry laboratory class, overseeing a total of 50 students.
+    * Prepared weekly experiment materials and graded assignments.
+
+### **Skills & Certifications**
+
+**Languages:** Thai (Native), English (Proficiency), Korean (Advanced beginner), and Chinese (Beginner)
+
+**Data analysis:** SAS, R, Python, STATA 	
+
+**Spatial analysis:** QGIS
+
+**Data collection:** Epicollect5, REDCap			
+
+**Data visualization:** Looker Studio, Flourish
+
+**Certifications:** Human Subject Research (CITI), Advanced Study Coordinator Training (SiCRES), Computer & management information system (MIS) in epidemiological studies (Grade A)
+
+### **Selected Research Publications**
+
+1.	Increased Fiber Intake Enhances Clostridia Bacteria and Reduces Clinical Relapse in Patients With Clinically Quiescent Inflammatory Bowel Disease: A Prospective Longitudinal Study. Limsrivilai, J., Sathirawich, P., Sattayalertyanyong, O., Pramyothin, P., Thaipisuttikul, I., Pausawasdi, N., Charatcharoenwitthaya, P., Sarasak, R., Nitayanon, P., Phaophu, P. and Subdee, N. (2025). JGH Open, 9(7), e70219.
+
+2.	Poor sleep quality is common and independently associated with disease activity and poor quality of life in inflammatory bowel disease: a long-term follow-up study.
+Chaemsupaphan, T., Pimolsri, C., Subdee, N., Phaophu, P., Salaemae, M., Permpim, P., ... & Limsrivilai, J. (2025). Therapeutic Advances in Gastroenterology, 18, 17562848241311142.
+
+3.	Evaluating the efficacy of fecal immunochemical test, fecal calprotectin, and serum C-reactive protein in diagnosing patients with chronic lower gastrointestinal symptoms.
+Limsrivilai, J., Yodmalai, C., Chaemsupaphan, T., Sattayalertyanyong, O., Subdee, N., Permpim, P., Phaophu, P., Kaosombatwattana, U., Pausawasdi, N., Riansuwan, W. and Charatcharoenwitthaya, P., 2024. Clinical and Translational Gastroenterology, 10-14309.
+
+4.	Performance of cytomegalovirus real-time polymerase chain reaction assays of fecal and plasma specimens for diagnosing cytomegalovirus colitis
+Sattayalertyanyong, Onuma MD1,2; Limsrivilai, Julajak MD, MSc1,a; Phaophu, Phutthaphorn1; Subdee, Nichcha1; Horthongkham, Navin PhD3; Pongpaibul, Ananya MD4; Angkathunyakul, Napat MD4; Chayakulkeeree, Methee MD, PhD5; Pausawasdi, Nonthalee MD1; Charatcharoenwitthaya, Phunchai MD, MSc1 Clinical and Translational Gastroenterology ():10.14309/ctg.0000000000000574, March 01, 2023. 
+
+5.	Burden of Inflammatory Bowel Disease on Patient Mood, Fatigue, Work and Health-Related Quality of Life in Thailand: A Case-Control Study
+Kasenee Tiankanon, MD, Julajak Limsrivilai, MD, Napapat Poocharoenwanich, MD, Phutthaphorn Phaophu, M.Sc, Nichcha Subdee, B.Sc, Natanong Kongtub, B.Sc, Satimai Aniwan, MD, Crohn's & Colitis 360, 2021; otab077, https://doi.org/10.1093/crocol/otab077
+
+
+For more detail, please see my CV below.
+
+[**CV - Nichcha Subdee**](files/CV_ns3923.pdf){target="_blank" rel="noopener"}
+
