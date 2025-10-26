@@ -12,7 +12,7 @@ navbar:
 
 # About the NY NOAA data
 
-This dashboard uses the `ny_noaa` dataset from the `p8105.datasets` package. The data come from the National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) database. 
+This dashboard uses the `ny_noaa` dataset from the `p8105.datasets` package. The data come from the National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI) database from 2000 to 2010. 
 
 For smooth viewing, the scatter plot shows a random sample of up to 20,000 days. The box plot and bar chart use the filtered data or monthly counts.
 
