@@ -13,6 +13,9 @@ Hello! I'm a second-year MPH student in the Department of Epidemiology with a Ce
 - Explore my **Flexdashboard** (interactive plots).
 - Connect with me on **LinkedIn**:  
   [linkedin.com/in/nichcha-subdee-b94247108](https://www.linkedin.com/in/nichcha-subdee-b94247108/){target="_blank" rel="noopener"}
+  
+<img src="files/ns3923.jpg" style="width:75%">
+
 
 _Last updated: `r format(Sys.Date(), "%B %Y")`_
 
